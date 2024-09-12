@@ -46,6 +46,9 @@ const isValidUrl = (url) => {
     return false;
   }
 };
+app.get('/', (req, res)=>{
+    res.send("Server is running")
+})
 
 // Upload API
 app.post('/upload', upload.single('csv'), async (req, res) => {
